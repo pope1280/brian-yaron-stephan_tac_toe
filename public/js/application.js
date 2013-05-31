@@ -3,22 +3,14 @@ Game ={
     
 
 
-    //DEPENDS ON USER LOGGED IN
-    addX
-    addO
+    
+    addMove(DEPENDS ON USER);
 
   }
 
-  function addX(){
-
-
+  function addMove(xOrO){
+    .css("background-image", '(url)"../images/'+ xOrO +'.png"');
   }
-
-  function addO(){
-
-
-  }
-
 }
 
 $(document).ready(function() {
