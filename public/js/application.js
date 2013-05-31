@@ -1,17 +1,22 @@
 Game ={
   begin: function(){
-    $('CELL SELECTED').on('click', function(){
-      addMove(CELL SELECTED, X OR O(WHICH USER LOGGED IN) );
-    });
+    // $('CELL SELECTED').on('click', function(){
+    //   addMove(CELL SELECTED, X OR O(WHICH USER LOGGED IN) );
+    // });
   };
 
-  function addMove(cell, xOrO){
-    cell.css("background-image", '(url)"../images/'+ xOrO +'.png"');
-  };
 
   function updateBoard(string){
-    new_board = string.split('');
-
+    var new_board = string.split('');
+    var i = 1;
+    for (i; i < 10; i++) {
+      var id = new_board[i];
+      if (id = 1){
+        $('#'+ i +'').css("background-image", 'url(../images/x.png)');
+      } else if(id = 2){
+        $('#'+ i +'').css("background-image", 'url(../images/O.png)');
+      }
+    };
   }
 
   var game_id = location.href.split("game/").pop();
