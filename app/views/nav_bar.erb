@@ -1,0 +1,12 @@
+<div class='nav_bar'>
+  <a href='/' id="logo"><strong>Tic-Tac-Toe</strong></a>
+
+  <ul>
+  <% if current_user %>
+    <li><a href='/logout'>Log Out</a></li>
+  <% else %>
+    <li><a href='/login'>Login</a></li>
+    <li><a href='/signup'>Sign Up</a></li>
+  <% end %>
+  </ul>
+</div>
