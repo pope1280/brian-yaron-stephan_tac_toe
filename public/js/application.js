@@ -1,7 +1,26 @@
-$(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+Game ={
+  begin: function(){
+    
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+
+    //DEPENDS ON USER LOGGED IN
+    addX
+    addO
+
+  }
+
+  function addX(){
+
+
+  }
+
+  function addO(){
+
+
+  }
+
+}
+
+$(document).ready(function() {
+  Game.begin();
 });
