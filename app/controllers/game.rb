@@ -2,7 +2,7 @@
 
 get '/game/:game_id' do
   current_user
-
+  erb :game
 
 end
 
