@@ -15,6 +15,14 @@ $(document).ready(function(){
     });
   }
 
+  function sendMove(cell) {
+    $.ajax({
+      type: 'post',
+      url: ('/game' + game_id + '/move' + cell)
+    }).done(function(data) {
+      updateBoard(data.board);
+  })
+
   window.setInterval(function() {
     checkTurn(game_id);
   }, 5000);

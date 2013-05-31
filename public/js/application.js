@@ -1,10 +1,13 @@
 Game ={
   begin: function(){
-    // $('CELL SELECTED').on('click', function(){
-    //   addMove(CELL SELECTED, X OR O(WHICH USER LOGGED IN) );
-    // });
+    $('CELL SELECTED').on('click', function(){
+      addMove(CELL SELECTED, X OR O(WHICH USER LOGGED IN) );
+    });
   };
 
+  function addMove(cell, xOrO){
+    
+  };
 
   function updateBoard(string){
     var new_board = string.split('');
@@ -14,8 +17,8 @@ Game ={
       if (id = 1){
         $('#'+ i +'').css("background-image", 'url(../images/x.png)');
       } else if(id = 2){
-        $('#'+ i +'').css("background-image", 'url(../images/O.png)');
-      }
+        $('#'+ i +'').css("background-image", '(url(../images/O.png)');
+      };
     };
   }
 
