@@ -1,4 +1,4 @@
-class Matches < ActiveRecord::Base
+class Match < ActiveRecord::Base
   belongs_to :user
   belongs_to :game
 
@@ -6,8 +6,8 @@ class Matches < ActiveRecord::Base
     self.board
   end
 
-  def turn(user_id)
-    if self.user_id == user_id
+  def player_turn(id)
+    if self.user_id == id
       return check_turn("1")
     else
       return check_turn("2")

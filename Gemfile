@@ -17,6 +17,11 @@ gem 'rake'
 
 gem 'shotgun'
 
+gem 'bcrypt-ruby'
+
+gem 'sidekiq'
+gem 'redis'
+gem 'sidekiq-failures'
 
 group :test do
   gem 'faker'

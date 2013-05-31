@@ -1,7 +1,15 @@
-$(document).ready(function() {
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
+Game ={
+  begin: function(){
+    $('CELL SELECTED').on('click', function(){
+      adMove(CELL SELECTED, X OR O(WHICH USER LOGGED IN) );
+    });
+  };
 
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  function addMove(cell, xOrO){
+    ITEM TO BE CHOSEN.css("background-image", '(url)"../images/'+ xOrO +'.png"');
+  };
+}
+
+$(document).ready(function() {
+  Game.begin();
 });
