@@ -6,6 +6,12 @@
   line-height: 3em;
 }
 
+.nav_bar #logo {
+  padding-left: 15px;
+  color: white;
+  text-decoration: none;
+}
+
 .nav_bar ul {
   float: right;
   display: block;
@@ -14,6 +20,7 @@
 
 .nav_bar ul li {
   display: inline;
+  padding-right: 15px;
 }
 
 .nav_bar ul li a {
