@@ -1,7 +1,8 @@
 Game ={
   begin: function(){
-    $('CELL SELECTED').on('click', function(){
-      addMove(CELL SELECTED, X OR O(WHICH USER LOGGED IN) );
+    $('li').on('click', function(){
+      var cell = $(this).attr(id);
+      addMove(cell);
     });
   };
 
