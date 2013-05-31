@@ -2,6 +2,7 @@
 
 get '/game/:game_id' do
   current_user
+  @match = Match.find(game_id)
   erb :game
 
 end

@@ -19,8 +19,9 @@ $(document).ready(function(){
     $.ajax({
       type: 'post',
       url: ('/game' + game_id + '/move' + cell)
-    });
-  }
+    }).done(function(data) {
+      updateBoard(data.board);
+  })
 
   window.setInterval(function() {
     checkTurn(game_id);
