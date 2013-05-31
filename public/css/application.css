@@ -1,9 +1,22 @@
 .container {
-  margin: 100px auto;
+  margin: 100px;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  /*border: 1px dotted black;*/
 }
 th {
   text-align: left;
+}
+
+.play h1 {
+ text-align: center;
+}
+
+.board li{
+  display:block;
+  width:30%;
+  float:left;
+  height:200px;
+  border:solid black 1px;
+
 }
