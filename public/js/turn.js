@@ -9,7 +9,8 @@ $(document).ready(function(){
       url: ('/game' + game_id + '/turn')
     }).done(function(data){
       if (data.turn === "go") {
-        console.log("you can play now");
+        console.log("you can play now --activate clicks");
+        console.log(data.board);
       }
     });
   }

@@ -16,7 +16,7 @@ class Matches < ActiveRecord::Base
 
   def check_turn(id)
     if self.turn == id
-      {turn: "go"}
+      {turn: "go", board: self.board}
     else
       {turn: "wait"}
     end
