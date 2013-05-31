@@ -1,0 +1,17 @@
+.nav_bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  line-height: 3em;
+}
+
+.nav_bar ul {
+  float: right;
+  display: block;
+  margin: 0 auto;
+}
+
+.nav_bar ul li {
+  display: inline;
+}

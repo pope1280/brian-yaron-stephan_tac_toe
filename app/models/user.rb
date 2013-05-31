@@ -1,8 +1,12 @@
 require 'bcrypt'
 
 class User < ActiveRecord::Base
+  validates :name, :uniqueness => true
+
   has_many :matches
   has_many :games, through: :matches
+
+
 
   include BCrypt
 

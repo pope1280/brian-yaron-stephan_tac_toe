@@ -3,7 +3,7 @@ get '/login' do
 end
 
 post '/login' do
-   @user = User.find_by_name(params[:name])
+  @user = User.find_by_name(params[:name])
 
   if !@user
     redirect '/login'
