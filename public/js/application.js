@@ -1,24 +1,13 @@
 Game ={
   begin: function(){
-    
+    $('CELL SELECTED').on('click', function(){
+      adMove(CELL SELECTED, X OR O(WHICH USER LOGGED IN) );
+    });
+  };
 
-
-    //DEPENDS ON USER LOGGED IN
-    addX
-    addO
-
-  }
-
-  function addX(){
-
-
-  }
-
-  function addO(){
-
-
-  }
-
+  function addMove(cell, xOrO){
+    ITEM TO BE CHOSEN.css("background-image", '(url)"../images/'+ xOrO +'.png"');
+  };
 }
 
 $(document).ready(function() {
