@@ -17,6 +17,7 @@ gem 'rake'
 
 gem 'shotgun'
 
+gem 'bcrypt-ruby'
 
 gem 'sidekiq'
 gem 'redis'

@@ -5,14 +5,15 @@
   end
 
   def login
+    p params
     @user = User.find_by_name(params[:name])
    
     if @user
       if @user.password == params[:password]
         session[:user_id] = @user.id
-        #what route?
+        redirect '/'
       else
-        #what route ?
+        redirect '/signup'
       end
     end
   end

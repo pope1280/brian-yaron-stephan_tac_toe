@@ -2,7 +2,7 @@
   <a href='/' id="logo"><strong>Tic-Tac-Toe</strong></a>
 
   <ul>
-  <% if current_user %>
+  <% if @user %>
     <li><a href='/logout'>Log Out</a></li>
   <% else %>
     <li><a href='/login'>Login</a></li>

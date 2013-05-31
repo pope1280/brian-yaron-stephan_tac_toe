@@ -28,5 +28,5 @@ end
 
 get '/logout' do
   session.clear
-  # what route to redirect to?
+  redirect '/'
 end
