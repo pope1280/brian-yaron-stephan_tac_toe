@@ -18,10 +18,6 @@ gem 'rake'
 gem 'shotgun'
 
 
-gem 'sidekiq'
-gem 'redis'
-gem 'sidekiq-failures'
-
 group :test do
   gem 'faker'
   gem 'rspec'
