@@ -1,25 +1,33 @@
-Game ={
+Game = {
   begin: function(){
-    $('CELL SELECTED').on('click', function(){
-      addMove(CELL SELECTED, X OR O(WHICH USER LOGGED IN) );
+    $('li').on('click', function(){
+      var cell = $(this).attr('id');
+      sendMove(cell);
     });
-  };
+  }
+};
 
-  function addMove(cell, xOrO){
-    
-  };
+  function sendMove(cell) {
+    var num = cell[4];
+    $.ajax({
+      type: 'post',
+      url: ('/game/' + game_id + '/move/' + num)
+    }).done(function(data) {
+      updateBoard(data);
+    });
+  }
 
   function updateBoard(string){
-    var new_board = string.split('');
-    var i = 1;
-    for (i; i < 10; i++) {
+    var new_board = string.split("");
+    var i = 0;
+    for (i; i < 9; i++) {
       var id = new_board[i];
-      if (id = 1){
-        $('#'+ i +'').css("background-image", 'url(../images/x.png)');
-      } else if(id = 2){
-        $('#'+ i +'').css("background-image", '(url(../images/O.png)');
-      };
-    };
+      if (id === '1') {
+        $('#cell'+ (i+1) +'').append('<img src="../images/x.png" height="130px" width="130px">');
+      } else if (id === '2') {
+        $('#cell'+ (i+1) +'').append('<img src="../images/o.png" height="130px" width="130px">');
+      }
+    }
   }
 
   var game_id = location.href.split("game/").pop();
@@ -28,7 +36,7 @@ Game ={
   function checkTurn(game_id) {
     $.ajax({
       type: 'get',
-      url: ('/game' + game_id + '/turn')
+      url: ('/game/' + game_id + '/turn')
     }).done(function(data){
       if (data.turn === "go") {
         updateBoard(data.board);
@@ -36,7 +44,6 @@ Game ={
       }
     });
   }
-}
 
 $(document).ready(function() {
   Game.begin();

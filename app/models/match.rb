@@ -25,10 +25,10 @@ class Match < ActiveRecord::Base
   def update_board(move_id)
     old_board = self.board.split('')
     if self.user_id == id
-      old_board[move_id - 1] = "1"
+      old_board[move_id.to_i - 1] = "1"
       self.turn = "2"
     else
-      old_board[move_id - 1] = "2"
+      old_board[move_id.to_i - 1] = "2"
       self.turn = "1"
     end
     old_board.join('')
