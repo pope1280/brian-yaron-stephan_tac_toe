@@ -4,7 +4,6 @@ get '/game/:game_id' do |game_id|
   current_user
   @match = Match.find(game_id)
   erb :game
-
 end
 
 get '/game/:game_id/turn' do |game_id|

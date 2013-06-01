@@ -33,4 +33,5 @@ class Match < ActiveRecord::Base
     end
     old_board.join('')
   end
+
 end
