@@ -2,8 +2,9 @@
   <% if @user %>
   <h1>List active games...</h1>
 
-
-  <a id='new_game_link' href='#'>Start a New Game!</a>  
+  <form action="/game" method="post">
+    <input type="submit" value="Start a New Game!">
+  </form>
 
   <% else %>
   <h1>Welcome to yada yada</h1>
